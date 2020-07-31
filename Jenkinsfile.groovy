@@ -20,7 +20,7 @@ pipeline {
                 allure includeProperties: false,
                         jdk: 'jdk8',
                         report: 'target/allure-report',
-                        results: [[path: 'targer/allure-results']]
+                        results: 'target/allure-results'
                 }
             }
         }
