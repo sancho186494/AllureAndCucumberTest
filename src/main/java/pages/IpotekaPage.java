@@ -79,11 +79,11 @@ public class IpotekaPage extends BasePage {
         getDriver().switchTo().defaultContent();
         js.executeScript("arguments[0].scrollIntoView(true);", h2);
         getDriver().switchTo().frame(frame);
-        wait.until(ExpectedConditions.textToBePresentInElement(monthlyPayment, "16 166 ₽"));
         return this;
     }
 
     public IpotekaPage checkMonthlyPayment(String value) {
+        wait.until(ExpectedConditions.textToBePresentInElement(monthlyPayment, value));
         Assertions.assertEquals(value, monthlyPayment.getText(), "Ежемесячный платеж не соответствует");
         return this;
     }
