@@ -14,11 +14,10 @@ pipeline {
         }
         stage('Allure report generation') {
             steps {
-                allure
-                    includeProperties: false,
-                    jdk: 'jdk8',
-                    report: 'target/allure-report',
-                    results: [[path: 'targer/allure-results']]
+                allure includeProperties: false,
+                        jdk: 'jdk8',
+                        report: 'target/allure-report',
+                        results: [[path: 'targer/allure-results']]
                 }
             }
         }
