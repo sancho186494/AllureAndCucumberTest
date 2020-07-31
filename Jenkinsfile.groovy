@@ -11,7 +11,7 @@ pipeline {
         stage('Build process') {
             steps {
                 withMaven(jdk: 'jdk8', maven: 'mavenn') {
-                    bash "mvn clean test ${PARAM}"
+                    "mvn clean test ${PARAM}"
                 }
             }
         }
