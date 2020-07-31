@@ -1,0 +1,5 @@
+# ignored files
+.idea/
+allure-results/
+target/
+*.iml
