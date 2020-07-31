@@ -3,9 +3,7 @@ package pages;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.opentest4j.AssertionFailedError;
 
-import static managers.DriverManager.*;
 import static managers.DriverManager.getDriver;
 
 public class IpotekaPage extends BasePage {

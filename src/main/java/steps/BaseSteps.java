@@ -2,8 +2,6 @@ package steps;
 
 import managers.PageManager;
 import managers.PageStepsManager;
-import pages.IpotekaPage;
-import pages.StartPage;
 
 import static managers.PageStepsManager.*;
 

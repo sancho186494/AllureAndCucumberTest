@@ -2,7 +2,6 @@ package steps;
 
 import io.qameta.allure.Step;
 import pages.StartPage;
-import utils.AllureUtils;
 
 public class StartPageSteps extends BaseSteps {
 
