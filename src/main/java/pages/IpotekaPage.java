@@ -3,6 +3,7 @@ package pages;
 import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import static managers.DriverManager.getDriver;
 
@@ -77,13 +78,8 @@ public class IpotekaPage extends BasePage {
         greenFamily.click();
         getDriver().switchTo().defaultContent();
         js.executeScript("arguments[0].scrollIntoView(true);", h2);
-        h2.isDisplayed();
         getDriver().switchTo().frame(frame);
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        wait.until(ExpectedConditions.textToBePresentInElement(monthlyPayment, "16 166 ₽"));
         return this;
     }
 

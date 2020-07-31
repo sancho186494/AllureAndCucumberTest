@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static managers.PageStepsManager.*;
 
-public class FirstCaseForAllure extends BaseTest {
+public class FirstCaseForAllureTest extends BaseTest {
 
     @Test
     void runTest() {
@@ -18,7 +18,7 @@ public class FirstCaseForAllure extends BaseTest {
                 inputCreditTermStep("30").
                 clickSberCardTumblerStep().
                 clickSGreenFamilyStep().
-                checkMonthlyPaymentStep("34 810 ₽").
+                checkMonthlyPaymentStep("16 166 ₽").
                 checkCreditAmountStep("2 122 000 ₽").
                 checkNecessaryIncomeStep("20 811 ₽").
                 checkCreditRateStep("11%");

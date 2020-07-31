@@ -3,9 +3,12 @@ package pages;
 import managers.PageManager;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static managers.DriverManager.*;
 
@@ -14,6 +17,7 @@ public class BasePage {
     protected PageManager pageManager = PageManager.getPageManager();
     protected Actions action = new Actions(getDriver());
     protected JavascriptExecutor js = (JavascriptExecutor) getDriver();
+    protected Wait<WebDriver> wait = new WebDriverWait(getDriver(), 5, 2000);;
 
     public BasePage() {
         PageFactory.initElements(getDriver(), this);
