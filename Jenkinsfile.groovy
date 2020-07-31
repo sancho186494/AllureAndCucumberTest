@@ -1,8 +1,11 @@
 pipeline {
+
+    agent any
+
     stages {
         stage('Передаваемый параметр') {
             steps {
-                echo ${PARAM}
+                echo "${PARAM}"
             }
         }
         stage('Build process') {
