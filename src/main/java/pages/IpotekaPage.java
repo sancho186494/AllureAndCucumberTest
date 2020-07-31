@@ -81,6 +81,11 @@ public class IpotekaPage extends BasePage {
         js.executeScript("arguments[0].scrollIntoView(true);", h2);
         h2.isDisplayed();
         getDriver().switchTo().frame(frame);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return this;
     }
 
