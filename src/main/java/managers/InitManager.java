@@ -21,6 +21,7 @@ public class InitManager {
     }
 
     public static void quit() {
+        utils.AllureUtils.addScreenShot();
         quitDriver();
     }
 }
